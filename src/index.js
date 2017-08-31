@@ -7,17 +7,18 @@ import registerServiceWorker from './registerServiceWorker';
 // ReactDOM.render(<App />, document.getElementById('root'));
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import App from './containers/App'
-import todoApp from './reducers'
+// import App from './containers/App'
+import Page from './containers/Page'
+import storeConfig from './store/storeConfig'
 
-let store = createStore(todoApp)
+const store = storeConfig();
 
 let rootElement = document.getElementById('root')
 render(
   <Provider store={store}>
-    <App />
+    {/* <App /> */}
+    <Page />
   </Provider>,
   rootElement
 )

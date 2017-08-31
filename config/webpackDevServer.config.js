@@ -7,6 +7,8 @@ const paths = require('./paths');
 
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || '0.0.0.0';
+//context可以是单个字符串，也可以是多个字符串数组，分别对应你需要代理的api,星号（*）表示匹配当前路径下面的所有api
+const context = ['/api/v2/*'];
 
 module.exports = function(proxy, allowedHost) {
   return {
@@ -77,7 +79,14 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    proxy//:[
+        //{
+        //    context: context,
+        //    target: 'http://pokeapi.co',
+        //    secure: false
+        //}
+    //]
+    ,
     setup(app) {
       // This lets us open files from the runtime error overlay.
       app.use(errorOverlayMiddleware());
