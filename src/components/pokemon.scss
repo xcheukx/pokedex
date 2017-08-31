@@ -2,7 +2,7 @@
 * @Author: 卓圳宝
 * @Date:   2017-08-31 16:43:12
 * @Last Modified by:   卓圳宝
-* @Last Modified time: 2017-08-31 17:21:25
+* @Last Modified time: 2017-08-31 17:55:54
 */
 .pokemons{
 	&__item{
@@ -10,6 +10,7 @@
 		border:1px solid #eee;
 		padding:10px;
 		text-align: center;
+		margin-bottom: 10px;
 	}
 	&__id{
 		position: absolute;
