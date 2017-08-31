@@ -2,7 +2,7 @@
 * @Author: 卓圳宝
 * @Date:   2017-08-30 14:26:45
 * @Last Modified by:   卓圳宝
-* @Last Modified time: 2017-08-30 14:36:01
+* @Last Modified time: 2017-08-31 17:23:56
 */
 
 import React, { Component } from 'react'
@@ -11,6 +11,7 @@ import { connect } from 'react-redux'
 import Pokemon from '../components/Pokemon'
 import Search from '../components/Search'
 import * as pageActions from '../actions'
+import './page.scss'
 
 class Page extends Component {
   componentDidMount() {
